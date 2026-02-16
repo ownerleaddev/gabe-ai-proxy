@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: gabe-ai-proxy
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: OPENAI_KEY
+        sync: false
+      - key: GEMINI_KEY
+        sync: false
